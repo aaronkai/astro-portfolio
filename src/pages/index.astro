@@ -1,0 +1,70 @@
+---
+import MainHead from '../components/MainHead.astro'
+import Nav from '../components/Nav.astro'
+import Footer from '../components/Footer.astro'
+import ProjectCard from '../components/ProjectCard.astro'
+
+interface MarkdownFrontmatter {
+  publishDate: number;
+}
+
+// const projects = Astro.fetchContent('./project/*.md');
+const projects = Astro.fetchContent<MarkdownFrontmatter>('./project/*.md')
+  .filter(({ publishDate }) => !!publishDate)
+  .sort((a, b) => new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf());
+
+//bug prevents calling this just yet.
+	// const blogposts = Astro.fetchContent<MarkdownFrontmatter>('./blogposts/*.md')
+  // .filter(({ publishDate }) => !!publishDate)
+  // .sort((a, b) => new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf());
+
+const featuredProject = projects[0];
+
+---
+
+<html lang="en">
+<head>
+	<MainHead />
+</head>
+<body class="bg-gray-50">
+	<Nav />
+	<main class="grid gap-16 ">
+		<header class="px-4 py-8 bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 h-96 grid items-center">
+			<div class="grid gap-4">
+			<h1 >Aaron Hubbard</h1>
+			<h2 >Jamstack Developer</h2>
+			<h3 >Building fast and functional things for the web</h3>
+			</div>
+		</header>
+
+		<section class="px-4 grid gap-4">
+			<h2 class="f\">Selected Work</h2>
+			<ProjectCard project={featuredProject} />			
+		</section>
+
+		<section class="px-4 grid gap-4">
+			<h2>About Me</h2>
+			<p>
+				Hi! I'm Aaron Hubbard, a family-man and web-developer based in Asheville, NC. By day, I'm an
+				application administrator for NOAA's CLASS project. In my free-time, I'm learning more and
+				more about making modern websites.
+			</p>
+			<p>To see some examples of my work, <a href="/projects">check out my projects</a>.</p>
+			<p>
+				If you want to hear me ramble about what I'm working on right now, check out my blog posts
+			</p>
+			<p>Drop me a line using the contact link.</p>
+		</section>
+
+		<section class="px-4 grid gap-4">
+			<h2>Blogposts</h2>
+			<ul>
+				blogposts will go here once <a class="underline" href="https://github.com/snowpackjs/astro/issues/1496">bug</a> is fixed. 
+			</ul>
+		</section>
+</main>
+<Footer />
+   
+
+</body>
+</html>

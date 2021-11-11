@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-7xl font-lato text-gray-900 font-bold;
+  }
+  h2 {
+    @apply text-5xl font-lato font-bold text-gray-900;
+  }
+  h3 {
+    @apply text-3xl font-lato text-gray-900;
+  }
+  p,
+  a {
+    @apply font-lato text-gray-900;
+  }
+  p,
+  li {
+    @apply leading-8;
+  }
+  li {
+    @apply list-disc list-inside;
+  }
+  .title {
+    @apply text-yellow-500;
+  }
+}

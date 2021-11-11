@@ -1,0 +1,46 @@
+---
+import InnerBodyWrapper from '../layouts/InnerBodyWrapper.astro'
+import MainHead from '../components/MainHead.astro'
+import Debug from 'astro/debug'
+import ProjectCard from '../components/ProjectCard.astro'
+
+interface ProjectMarkdownFrontmatter {
+  title: string;
+  client: string;
+  publishDate: number;
+  img: string;
+  description: string;
+  url: string;
+  link: string;
+  tags: Array<string>;
+  astro: {
+    headers: Array<string>;
+    source: string;
+    html: string;
+  }
+}
+
+const projects = Astro.fetchContent<ProjectMarkdownFrontmatter>('./project/*.md')
+  .filter(({ publishDate }) => !!publishDate)
+  .sort((a, b) => new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf());
+---
+<html lang="en">
+  <head>
+    <MainHead title="All Projects | Aaron Hubbard" description="Learn about Aaon Hubbards's most recent projects" />
+  </head>
+
+<body>
+    <InnerBodyWrapper>
+      <div class="wrapper grid gap-8 items-center justify-center px-4">
+        <h1 class="mt-8">All Projects</h1>
+        <div class="grid gap-12">
+          {projects.map((project) => (
+            <ProjectCard project={project} />
+          ))}
+        </div>
+      </div>
+    </InnerBodyWrapper>
+</body>
+
+</html>
+
