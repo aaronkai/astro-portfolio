@@ -4,7 +4,7 @@ title: Asheville Aikikai Dojo Website
 client: Self
 publishDate: 2021-11-07 16:00:00
 img: /aikikai.png
-description: A React app for cataloging and geo-locating wine
+description: A landing page for a local martial-arts dojo build in SvelteKit with a Sanity CMS backend.
 link: https://development--asheville-aikikai-refresh.netlify.app/
 tags:
   - SvelteKit

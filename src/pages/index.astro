@@ -3,6 +3,7 @@ import MainHead from '../components/MainHead.astro'
 import Nav from '../components/Nav.astro'
 import Footer from '../components/Footer.astro'
 import ProjectCard from '../components/ProjectCard.astro'
+import Hero from '../components/Hero.astro'
 
 interface MarkdownFrontmatter {
   publishDate: number;
@@ -28,22 +29,21 @@ const featuredProject = projects[0];
 </head>
 <body class="bg-gray-50">
 	<Nav />
-	<main class="grid gap-16 ">
-		<header class="px-4 py-8 bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 h-96 grid items-center">
-			<div class="grid gap-4">
-			<h1 >Aaron Hubbard</h1>
-			<h2 >Jamstack Developer</h2>
-			<h3 >Building fast and functional things for the web</h3>
-			</div>
-		</header>
+	<main class="grid gap-24 ">
+		<Hero>
+			<h1 class="text-2xl font-normal">The Portfolio of</h1>
+			<h1 class="text-5xl font-extrabold">Aaron Hubbard</h1>
+			<h2 class="text-3xl">Jamstack Developer</h2>
+			<h3 class="text-xl">Building fast and functional things for the web</h3>
+		</Hero>
 
-		<section class="px-4 grid gap-4">
-			<h2 class="f\">Selected Work</h2>
+		<section class="px-6 grid gap-8">
+			<h2 class="font-extrabold">Selected Work</h2>
 			<ProjectCard project={featuredProject} />			
 		</section>
 
-		<section class="px-4 grid gap-4">
-			<h2>About Me</h2>
+		<section class="px-6 grid gap-4">
+			<h2 class="font-extrabold">About Me</h2>
 			<p>
 				Hi! I'm Aaron Hubbard, a family-man and web-developer based in Asheville, NC. By day, I'm an
 				application administrator for NOAA's CLASS project. In my free-time, I'm learning more and
@@ -56,8 +56,8 @@ const featuredProject = projects[0];
 			<p>Drop me a line using the contact link.</p>
 		</section>
 
-		<section class="px-4 grid gap-4">
-			<h2>Blogposts</h2>
+		<section class="px-6 grid gap-4">
+			<h2 class="font-extrabold">Blogposts</h2>
 			<ul>
 				blogposts will go here once <a class="underline" href="https://github.com/snowpackjs/astro/issues/1496">bug</a> is fixed. 
 			</ul>

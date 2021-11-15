@@ -4,7 +4,7 @@ title: SiteGeist
 client: Self
 publishDate: 2021-11-08 16:00:00
 img: /siteGeist.png
-description: A Pre-Registration Page For A Fake Social Media Venture
+description: A Pre-Registration Page For A Fake Social Media Venture using SvelteKit frontend and Supabase backend.
 link: https://sitegeist.netlify.app
 tags:
   - SvelteKit
