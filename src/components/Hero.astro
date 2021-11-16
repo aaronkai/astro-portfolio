@@ -1,13 +1,10 @@
-<header class=" h-96 overflow-hidden relative grid items-center">
-<!-- <img width="1600" height="1131" class="img astro-ldKR6c5M" src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&amp;q=75" srcset="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&amp;q=75 800w,
-        https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&amp;q=75 1200w,
-        https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1600&amp;q=75 1600w,
-        https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=2400&amp;q=75 2400w," sizes="(max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, (max-width: 2400px) 2400px, 1200px"> -->
-  <img class="w-full h-full max-w-full"src="https://source.unsplash.com/random/800" srcset="https://source.unsplash.com/random/800x600 800w,
-    https://source.unsplash.com/random/800x600 800w,
-    https://source.unsplash.com/random/1200x800 1200w,
-    https://source.unsplash.com/random/1600x1200 1600w" />
-  <div class="bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 h-96 w-full z-0 absolute mix-blend-screen"></div>
+<header class=" max-h-80 overflow-hidden relative grid items-center">
+  <picture>
+    <source type="image/webp" srcset="/hero-2000.webp" media="(min-width:1536px)" />
+    <source type="image/webp" srcset="/hero-1280.webp" media="(min-width:1024px)" />
+    <img class="w-full" src="/hero-640.webp" alt="arial view of Blue Ridge Mountains" />
+  </picture>
+  <div class="bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 h-80 w-full z-0 absolute mix-blend-screen"></div>
   <div class="px-6 py-4 z-10 absolute grid gap-4">
     <slot />
   </div>

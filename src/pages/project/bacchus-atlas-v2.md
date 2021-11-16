@@ -3,7 +3,7 @@ layout: ../../layouts/project.astro
 title: Bacchus Atlas Expanded
 client: Self
 publishDate: 2021-11-06 16:00:00
-img: bacchus_atlas_expanded_screencap.png
+img: /bacchus_atlas_expanded_screencap.png
 description: A React app for cataloging and geo-locating wine with a GraphQL  and KeystoneJS backend.
 link: https://www.bacchusatlas.com/
 tags:
