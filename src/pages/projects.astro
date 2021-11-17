@@ -36,7 +36,7 @@ const projects = Astro.fetchContent<ProjectMarkdownFrontmatter>('./project/*.md'
         <h1 class="font-extrabold">All Projects</h1>
       </Hero>
       <div class="wrapper grid gap-16 items-center justify-center px-6 pt-16 pb-4 bg-gray-200">
-        <div class="grid gap-12">
+        <div class="grid gap-12 md:grid-cols-2 xl:grid-cols-3">
           {projects.map((project) => (
             <ProjectCard project={project} />
           ))}

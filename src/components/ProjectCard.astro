@@ -26,7 +26,7 @@ const {project} = Astro.props;
   </div>
   <div class="bg-white grid  justify-center items-center px-6 py-16 rounded-b shadow-md ">
     <div class="grid gap-y-12">
-    <p class="uppercase cardtitle text-gray-900 text-center font-bold">{project.title}</p>
+    <h2 class="uppercase cardtitle text-gray-900 text-center font-bold">{project.title}</h2>
     <p class=" text-gray-900 text-xl text-center" >{project.description}</p>
     <div class="flex justify-around">
       <a class="text-gray-900 text-lg border-2 border-gray-900 uppercase font-bold px-2 py-1 rounded hover:bg-gray-300 hover:scale-110 transition duration-500 ease-in-out transform" href={project.url}>Details</a>

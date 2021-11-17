@@ -4,18 +4,17 @@
 
 @layer base {
   h1 {
-    @apply text-7xl font-lato text-gray-900 font-bold;
+    @apply text-7xl font-lato text-gray-900 font-bold xl:text-8xl;
   }
   h2 {
-    @apply text-5xl font-lato font-bold text-gray-900;
-    font-size: clamp(2.5rem, 7vw, 4rem);
+    @apply text-4xl font-lato font-bold text-gray-900 xl:text-6xl leading-normal;
   }
   h3 {
-    @apply text-3xl font-lato text-gray-900;
+    @apply text-3xl font-lato text-gray-900 xl:text-4xl leading-normal;
   }
   p,
   a {
-    @apply font-lato text-gray-900;
+    @apply font-lato text-gray-900 xl:text-xl;
   }
   p,
   li {
@@ -27,7 +26,7 @@
   #blogtitle {
   }
   .cardtitle {
-    font-size: clamp(2rem, 7vw, 4rem);
+    font-size: clamp(2rem, 5vw, 3rem);
   }
   .blog h2 {
     font-size: clamp(1.5rem, 4vw, 2rem);

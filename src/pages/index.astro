@@ -28,36 +28,45 @@ const featuredProject = projects[0];
 </head>
 <body class="bg-gray-50">
 	<Nav />
-	<main class="grid gap-24 ">
+	<main class="grid gap-16">
 		<Hero>
 			<h1 class="text-2xl font-normal">The Portfolio of</h1>
-			<h1 class="text-5xl font-extrabold">Aaron Hubbard</h1>
-			<h2 class="text-3xl">Jamstack Developer</h2>
+			<h1 class=" font-extrabold">Aaron Hubbard</h1>
+			<h2 class="text-3xl lg:text-4xl">Jamstack Developer</h2>
 		</Hero>
 
-		<section class="px-6 grid gap-8">
-			<h2 class="font-extrabold">Selected Work</h2>
-			<ProjectCard project={featuredProject} />			
-		</section>
+		<div class="grid gap-y-16 md:items-start md:grid-cols-2 ">
+			<section class="px-6 md:px-12 grid gap-8 md:gap-8 xl:border-r-2">
+				<h2 class="font-extrabold">Selected Work</h2>
+				<ProjectCard project={featuredProject} />			
+			</section>
 
-		<section class="px-6 grid gap-4 blog">
-			<h2 class="font-extrabold">About Me</h2>
-			<p>
-				Hi! I'm Aaron Hubbard, a family-man and web-developer based in Asheville, NC. By day, I'm an
-				application administrator for NOAA's CLASS project. In my free-time, I'm learning more and
-				more about making modern websites.
-			</p>
-			<p>To see some examples of my work, <a href="/projects">check out my projects</a>.</p>
-			<p>
-				If you want to hear me ramble about what I'm working on right now, check out my blog posts
-			</p>
-			<p>Drop me a line using the contact link.</p>
-		</section>
+			<div class="grid md:grid-rows-2 gap-16 md:border-l-2 xl:border-l-0 items-start">
+				<section class="px-6 md:px-12 grid gap-8 ">
+					<header>
+						<h2 class="font-extrabold">About Me</h2>
+					</header>
+					<section class="grid gap-4 items-start">
+						<p>
+							Hi! I'm Aaron Hubbard, a family-man and web-developer based in Asheville, NC. By day, I'm an
+							application administrator for NOAA's CLASS project. In my free-time, I'm learning more and
+							more about making modern websites.
+						</p>
+						<p>To see some examples of my work, <a href="/projects">check out my projects</a>.</p>
+						<p>
+							If you want to hear me ramble about what I'm working on right now, check out my blog posts
+						</p>
+						<p>Drop me a line using the contact link.</p>
+					</section>
+				</section>
 
-		<section class="px-6 grid gap-4">
-			<h2 class="font-extrabold">Recent Blogposts</h2>
-			<BlogpostCard />
-		</section>
+				<section class="px-6 md:px-12 grid gap-4 items-start">
+					<h2 class="font-extrabold">Recent Blogposts</h2>
+					<BlogpostCard />
+				</section>
+			
+			</div>	
+		</div>
 </main>
 <Footer />
    
