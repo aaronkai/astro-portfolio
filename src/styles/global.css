@@ -23,6 +23,9 @@
   li {
     @apply list-disc;
   }
+  .navLink {
+    @apply flex flex-col items-center justify-center p-2 md:px-8 md:text-2xl;
+  }
   #blogtitle {
   }
   .cardtitle {
