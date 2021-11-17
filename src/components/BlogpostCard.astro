@@ -1,0 +1,24 @@
+---
+  import Debug from "astro/debug"
+// bug prevents calling this just yet.
+	const blogposts = Astro.fetchContent('../pages/posts/*.md')
+  .filter(({ publishDate }) => !!publishDate)
+  .sort((a, b) => new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf()).slice(0,3);
+---
+
+  <!-- <Debug {blogposts} /> -->
+  <div>
+  <ul type="list" class="grid gap-4">
+
+  {blogposts.map( (post) => (
+    <Fragment>
+      <li class="list-none text-xl font-bold border-t border-gray-400 pt-2"><a href={post.url}>{post.title}</a>
+        <ul type="list" class="">
+          <li class="list-none font-normal text-base pt-1">{new Date(post.publishDate).toLocaleDateString()}</li>
+        </ul>
+      </li>
+    </Fragment>
+  ))}
+  
+  </ul>
+  </div>

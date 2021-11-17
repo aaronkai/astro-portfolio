@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/blog.astro
+layout: ../../layouts/blogLayout.astro
 title: Whoa TypeScript!
 tags:
   - TypeScript
@@ -16,7 +16,7 @@ Here's the code:
 
 ### http.ts
 
-```ts
+```typescript
 import {
   Application,
   send,

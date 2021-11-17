@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/blog.astro
+layout: ../../layouts/blogLayout.astro
 title: Setting up NeoVim to Code in Svelte
 tags:
   - svelteKit

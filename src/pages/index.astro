@@ -4,6 +4,8 @@ import Nav from '../components/Nav.astro'
 import Footer from '../components/Footer.astro'
 import ProjectCard from '../components/ProjectCard.astro'
 import Hero from '../components/Hero.astro'
+import BlogpostCard from '../components/BlogpostCard.astro'
+
 
 interface MarkdownFrontmatter {
   publishDate: number;
@@ -14,10 +16,7 @@ const projects = Astro.fetchContent<MarkdownFrontmatter>('./project/*.md')
   .filter(({ publishDate }) => !!publishDate)
   .sort((a, b) => new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf());
 
-//bug prevents calling this just yet.
-	// const blogposts = Astro.fetchContent<MarkdownFrontmatter>('./blogposts/*.md')
-  // .filter(({ publishDate }) => !!publishDate)
-  // .sort((a, b) => new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf());
+
 
 const featuredProject = projects[0];
 
@@ -41,7 +40,7 @@ const featuredProject = projects[0];
 			<ProjectCard project={featuredProject} />			
 		</section>
 
-		<section class="px-6 grid gap-4">
+		<section class="px-6 grid gap-4 blog">
 			<h2 class="font-extrabold">About Me</h2>
 			<p>
 				Hi! I'm Aaron Hubbard, a family-man and web-developer based in Asheville, NC. By day, I'm an
@@ -56,10 +55,8 @@ const featuredProject = projects[0];
 		</section>
 
 		<section class="px-6 grid gap-4">
-			<h2 class="font-extrabold">Blogposts</h2>
-			<ul>
-				<li>blogposts will go here once <a class="underline" href="https://github.com/snowpackjs/astro/issues/1496">bug</a> is fixed. </li>
-			</ul>
+			<h2 class="font-extrabold">Recent Blogposts</h2>
+			<BlogpostCard />
 		</section>
 </main>
 <Footer />

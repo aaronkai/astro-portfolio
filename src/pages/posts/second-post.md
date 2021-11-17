@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/blog.astro
+layout: ../../layouts/blogLayout.astro
 title: The Arc of History Bends Towards Arch
 tags:
   - arch linux

@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/blog.astro
+layout: ../../layouts/blogLayout.astro
 title: Building A Workout Tracker
 tags:
   - svelteKit

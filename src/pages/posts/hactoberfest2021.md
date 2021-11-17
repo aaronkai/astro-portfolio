@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/blog.astro
+layout: ../../layouts/blogLayout.astro
 title: Hacktoberfest 2021
 tags:
   - Hacktoberfest

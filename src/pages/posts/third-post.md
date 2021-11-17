@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/blog.astro
+layout: ../../layouts/blogLayout.astro
 title: SvelteKit Vs. Gatsby, TailwindCSS Vs. Itself.
 tags:
   - aikido website
