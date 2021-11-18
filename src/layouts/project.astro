@@ -10,16 +10,35 @@ const { content } = Astro.props;
     <MainHead />
   </head>
 <body>
+    <!-- <InnerBodyWrapper>
     <Debug {content} />
-    <InnerBodyWrapper>
-      <img src={content.img} />
       <h1 class="title">{content.title}</h1>
         {content.tags.map((t) => (
           <span class="tag">{t}</span>
         ))}
-        <h3 class="tagline">{content.description}</h3>
 
       <div class="content"><slot></slot></div>
+   
+    </InnerBodyWrapper> -->
+      <InnerBodyWrapper>
+      <main class="grid gap-4 md:gap-12 px-6 max-w-xl mx-auto mt-8 " >
+        <img src={content.img} />
+        <header class="grid gap-4">
+          
+          <h1 style="font-size: clamp(2.5rem, 5vw, 5rem);" class="title">{content.title}</h1>
+
+                  <h3 class="tagline">{content.description}</h3>
+          <ul type="list" class="flex flex-wrap">
+          {content.tags.map((tag) => (
+            <span class="mr-2 mb-2 text-white text-center font-bold bg-gray-900 rounded px-2 py-1">#{tag}</span>
+          ))}
+          </ul>
+        </header>
+        <!-- Section below styled in global.css with blog class -->
+        <section class="grid gap-4 blog">
+          <slot></slot>
+        </section>
+      </main>
    
     </InnerBodyWrapper>
 </body>
