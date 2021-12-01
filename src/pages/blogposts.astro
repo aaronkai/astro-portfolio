@@ -1,7 +1,8 @@
 ---
   import InnerBodyWrapper from '../layouts/InnerBodyWrapper.astro'
-import MainHead from '../components/MainHead.astro'
+  import MainHead from '../components/MainHead.astro'
   import Debug from "astro/debug"
+  import {Markdown} from 'astro/components'
   interface BlogpostMarkdownFrontmatter {
     title: string;
     publishDate: number;
@@ -23,6 +24,7 @@ const latestPostDate= new Date(blogposts[0].publishDate).toLocaleDateString();
 <html lang=en>
   <head>
        <MainHead title="All Blogposts | Aaron Hubbard" description="Words I wrote" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/themes/prism-twilight.css">
   </head>
   <body>
       <InnerBodyWrapper>
@@ -45,8 +47,10 @@ const latestPostDate= new Date(blogposts[0].publishDate).toLocaleDateString();
           <h2 style="font-size: clamp(2rem, 6vw, 3rem);">{blogposts[0].title}</h2>
           <h3>{latestPostDate}</h3>
           </header>
+          <Debug {blogposts} />
           <article class="grid gap-2 blog">
-            {blogposts[0].astro.html}
+            <Markdown content={blogposts[0].astro.html} />
+            <!-- {blogposts[0].astro.content} -->
           </article>
 
         </section>
@@ -54,8 +58,3 @@ const latestPostDate= new Date(blogposts[0].publishDate).toLocaleDateString();
     </InnerBodyWrapper>
   </body>
 </html>
-
-
-<!-- {projects.map((project) => (
-            <ProjectCard project={project} />
-          ))} -->

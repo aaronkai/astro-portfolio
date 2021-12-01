@@ -5,8 +5,6 @@ import Footer from '../components/Footer.astro'
 import ProjectCard from '../components/ProjectCard.astro'
 import Hero from '../components/Hero.astro'
 import BlogpostCard from '../components/BlogpostCard.astro'
-
-
 interface MarkdownFrontmatter {
   publishDate: number;
 }
@@ -16,10 +14,7 @@ const projects = Astro.fetchContent<MarkdownFrontmatter>('./project/*.md')
   .filter(({ publishDate }) => !!publishDate)
   .sort((a, b) => new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf());
 
-
-
 const featuredProject = projects[0];
-
 ---
 
 <html lang="en">
