@@ -1,5 +1,4 @@
 ---
-  import Debug from "astro/debug"
 // bug prevents calling this just yet.
 	const blogposts = Astro.fetchContent('../pages/posts/*.md')
   .filter(({ publishDate }) => !!publishDate)

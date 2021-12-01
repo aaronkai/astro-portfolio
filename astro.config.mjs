@@ -14,4 +14,7 @@ export default {
     tailwindConfig: "./tailwind.config.js",
   },
   renderers: ["@astrojs/renderer-svelte"],
+  vite: {
+    plugins: [],
+  },
 };

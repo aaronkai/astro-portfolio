@@ -47,7 +47,7 @@ const latestPostDate= new Date(blogposts[0].publishDate).toLocaleDateString();
           <h2 style="font-size: clamp(2rem, 6vw, 3rem);">{blogposts[0].title}</h2>
           <h3>{latestPostDate}</h3>
           </header>
-          <Debug {blogposts} />
+          <!-- <Debug {blogposts} /> -->
           <article class="grid gap-2 blog">
             <Markdown content={blogposts[0].astro.html} />
             <!-- {blogposts[0].astro.content} -->
