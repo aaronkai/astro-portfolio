@@ -15,7 +15,6 @@
     "tailwindcss": "^2.2.19"
   },
   "dependencies": {
-    "@astrojs/renderer-svelte": "^0.2.1",
     "autoprefixer": "^10.4.0"
   }
 }

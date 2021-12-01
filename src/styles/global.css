@@ -12,6 +12,9 @@
   h3 {
     @apply text-3xl font-lato text-gray-900 xl:text-4xl leading-normal;
   }
+  h4 {
+    @apply text-xl font-lato text-gray-900 xl:text-4xl leading-normal;
+  }
   p,
   a {
     @apply font-lato text-gray-900 xl:text-xl;

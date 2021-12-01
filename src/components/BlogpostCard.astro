@@ -1,5 +1,4 @@
 ---
-// bug prevents calling this just yet.
 	const blogposts = Astro.fetchContent('../pages/posts/*.md')
   .filter(({ publishDate }) => !!publishDate)
   .sort((a, b) => new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf()).slice(0,3);
