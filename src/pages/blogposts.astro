@@ -28,14 +28,14 @@ const latestPostDate= new Date(blogposts[0].publishDate).toLocaleDateString();
   </head>
   <body>
       <InnerBodyWrapper>
-      <main class="grid gap-16 px-6  max-w-xl m-auto">
+      <main class="grid max-w-xl gap-16 px-6 m-auto">
         <section class="grid gap-8">
         <h1 class="mt-8">Blogposts</h1>
-          <fieldset class="border border-gray-500 p-4">
-          <legend class="font-bold text-xl">Table of Contents</legend>
-          <ul role="list" class="list-disc ml-4 font-bold ">
+          <fieldset class="p-4 border border-gray-500">
+          <legend class="text-xl font-bold">Table of Contents</legend>
+          <ul role="list" class="ml-4 font-bold list-disc ">
             {blogposts.map((blogpost) => (
-              <li class="underline py-1 "> 
+              <li class="py-1 underline "> 
                 <a class="text-blue-800" href={blogpost.url}>{blogpost.title}</a>
               </li>
             ))}
@@ -43,8 +43,8 @@ const latestPostDate= new Date(blogposts[0].publishDate).toLocaleDateString();
           </fieldset>
         </section>
         <section class="grid gap-8">
-          <header class="grid gap-2 border-b-2 pb-4">
-          <h2 style="font-size: clamp(2rem, 6vw, 3rem);">{blogposts[0].title}</h2>
+          <header class="grid gap-2 pb-4 border-b-2">
+          <h2 style="font-size: clamp(2rem, 6vw, 3rem);">Latest Post: {blogposts[0].title}</h2>
           <h3>{latestPostDate}</h3>
           </header>
           <!-- <Debug {blogposts} /> -->
