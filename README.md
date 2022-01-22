@@ -1,3 +1,5 @@
-# Welcome to My [Astro](https://astro.build) Blog!
+# A personal portfolio for Aaron Hubbard
 
-## It's a work in progress!
+Built in Astro
+
+https://www.aaronhubbard.dev
