@@ -8,7 +8,7 @@ title: Getting vite-imagetools working with SvelteKit
 description: how to set up vite-imagetools for SvelteKit
 ---
 
-These cutting-edge frameworks are neat, but the image handling makes you yearn for the the warm blanket of a Gatsby/Next image, doeesn't it?
+I think These cutting-edge frameworks are neat, but the image handling makes you yearn for the the warm blanket of a Gatsby/Next image, doeesn't it?
 
 Let's see how much of that functionality we can recreate with [vite-imagetools](https://github.com/JonasKruckenberg/imagetools/blob/main/docs/guide/getting-started.md)
 
