@@ -8,6 +8,9 @@ module.exports = {
       gridTemplateRows: {
         "project-card": "2fr 1fr",
       },
+      gridTemplateColumns: {
+        nav: "1fr auto",
+      },
       gridAutoColumns: {
         autowrap: "repeat(auto-fill, 1fr)",
       },
