@@ -4,20 +4,20 @@
 
 @layer base {
   h1 {
-    @apply text-7xl font-lato text-gray-900 font-bold xl:text-8xl;
+    @apply font-bold text-gray-900 text-7xl font-lato xl:text-8xl;
   }
   h2 {
-    @apply text-4xl font-lato font-bold text-gray-900 xl:text-6xl leading-normal;
+    @apply text-4xl font-bold leading-normal text-gray-900 font-lato xl:text-6xl;
   }
   h3 {
-    @apply text-3xl font-lato text-gray-900 xl:text-4xl leading-normal;
+    @apply text-3xl leading-normal text-gray-900 font-lato xl:text-4xl;
   }
   h4 {
-    @apply text-xl font-lato text-gray-900 xl:text-4xl leading-normal;
+    @apply text-xl leading-normal text-gray-900 font-lato xl:text-4xl;
   }
   p,
   a {
-    @apply font-lato text-gray-900 xl:text-xl;
+    @apply text-gray-900 font-lato xl:text-xl;
   }
   p,
   li {
@@ -29,8 +29,8 @@
   .navLink {
     @apply flex flex-col items-center justify-center p-2 md:px-8 md:text-2xl;
   }
-  .navHover {
-    @apply border-b-4 border-transparent hover:border-blue-700 transition duration-300 ease-in-out hover:scale-105;
+  nav a {
+    @apply transition duration-300 ease-in-out hover:text-green-700 hover:scale-105;
   }
   #blogtitle {
   }
@@ -43,10 +43,10 @@
   }
   .blog h3 {
     font-size: clamp(1.25rem, 3vw, 1.75rem);
-    @apply mt-4 capitalize font-bold;
+    @apply mt-4 font-bold capitalize;
   }
   .blog a {
-    @apply underline text-blue-800 font-bold;
+    @apply font-bold text-blue-800 underline;
   }
   .blog ul {
     @apply ml-8;
