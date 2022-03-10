@@ -1,11 +1,15 @@
 ---
 const { title = 'AH.dev', description = 'The personal site of Aaron Hubbard' } = Astro.props;
+
 ---
 
 <meta charset="UTF-8">
 <meta name="description" property="og:description" content={description}>
 <meta name="viewport" content="width=device-width">
 <title>{title}</title>
+<style global>
+  @import "../styles/global.css";
+</style>
 
 <!-- Favicon -->
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
@@ -18,7 +22,6 @@ const { title = 'AH.dev', description = 'The personal site of Aaron Hubbard' } =
 <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico" />
 
 <!-- Google Fonts -->
-<link rel="stylesheet" href={Astro.resolve("../styles/global.css")}>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">

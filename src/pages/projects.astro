@@ -1,7 +1,6 @@
 ---
 import InnerBodyWrapper from '../layouts/InnerBodyWrapper.astro'
 import MainHead from '../components/MainHead.astro'
-import Debug from 'astro/debug'
 import ProjectCard from '../components/ProjectCard.astro'
 import Hero from '../components/Hero.astro'
 
@@ -35,7 +34,7 @@ const projects = Astro.fetchContent<ProjectMarkdownFrontmatter>('./project/*.md'
       <Hero>
         <h1 class="font-extrabold">All Projects</h1>
       </Hero>
-      <div class="wrapper grid gap-16 items-center justify-center px-6 md:p-12 pt-16 pb-4 bg-gray-200">
+      <div class="grid items-center justify-center gap-16 px-6 pt-16 pb-4 bg-gray-200 wrapper md:p-12">
         <div class="grid gap-12 lg:grid-cols-2 2xl:grid-cols-3">
           {projects.map((project) => (
             <ProjectCard project={project} />

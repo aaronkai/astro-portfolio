@@ -21,7 +21,7 @@ const { content } = Astro.props;
    
     </InnerBodyWrapper> -->
       <InnerBodyWrapper>
-      <main class="grid gap-4 md:gap-12 px-6 max-w-xl mx-auto mt-8 " >
+      <main class="grid max-w-xl gap-4 px-6 mx-auto mt-8 md:gap-12 " >
         <img src={content.img} />
         <header class="grid gap-4">
           
@@ -30,7 +30,7 @@ const { content } = Astro.props;
                   <h3 class="tagline">{content.description}</h3>
           <ul type="list" class="flex flex-wrap">
           {content.tags.map((tag) => (
-            <span class="mr-2 mb-2 text-white text-center font-bold bg-gray-900 rounded px-2 py-1">#{tag}</span>
+            <span class="px-2 py-1 mb-2 mr-2 font-bold text-center text-white bg-gray-900 rounded">#{tag}</span>
           ))}
           </ul>
         </header>
